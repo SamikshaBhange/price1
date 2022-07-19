@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>car price</title>
+</head>
+<body bgcolor="cyan">
+<center>
+<b><i><h1>Car Price Prediction</h1></i></b><br><br>
+<form action="{{ url_for('pred') }}" method="POST">
+    <i><b> <label>select company</label><br><br></b></i>
+    <input type="text" name="co_file"><br><br>
+    <i><b><label>select model</label><br><br></b></i>
+    <input type="text" name="mo_file"><br><br>
+    <i><b><label>select year</label><br><br></b></i>
+    <input type="number" name="yr_file"><br><br>
+    <i><b><label>select fuel type</label><br><br></b></i>
+    <input type="text" name="fu_file"><br><br>
+    <i><b> <label>km</label><br><br></b></i>
+    <input type="number" name="km_file"><br><br><br>
+    <button type="submit">Predict</button>
+</form>
+
+<h4>
+   {{prediction_text}}
+</h4>
+</center>
+</body>
+</html>
